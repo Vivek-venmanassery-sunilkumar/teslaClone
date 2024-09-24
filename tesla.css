@@ -1,0 +1,132 @@
+
+.Position_relative_container{
+    position: relative;
+}
+body{
+    margin: 0;
+}
+
+.image_modelY{
+    margin-top: -69px;
+    width: 1519px;
+    height: 883px;
+}
+
+.title_bar{
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    position:relative;
+    top: 0;
+    padding-left: 42px;
+    padding-top: 20px;
+    
+}
+.Tesla_logo_wrapper{
+    
+    width: 150px;
+    height: 30px;
+    position:relative;
+    overflow: hidden;
+}
+.First_background_modelY{
+    overflow: hidden;
+    height: 747px;
+    width: 1536px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.Tesla_logo{
+    transform: scale(1.2);
+    width: 120px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.logo_link{
+    display: block;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.menu_options{
+    position: absolute;
+    top: 7px;
+    left: 565px;
+    overflow: hidden;
+    height:30px;
+}
+.menu_list_main{
+    margin-top: 2%;
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    border: none;
+    margin-left: -40px;
+}
+.menu_list_main button{
+    font-family:  Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 750;
+    padding: 4px 15px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.menu_list_main button:hover{
+    border-radius: 5px;
+    background-color: #d0d1d2;
+    box-sizing: border-box;
+    color: black;
+}
+
+
+.top_right_three_buttons_list{
+    display: flex;
+    list-style-type: none;
+    gap: 4%;
+}
+.top_right_three_buttons{
+    
+    width: 150px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 1300px;
+}
+
+.small_button_atag{
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  transition: background-color 0.3s ease;
+}
+.small_button_atag svg{
+    padding-left: 4px;
+}
+.small_button_atag :hover{
+    overflow: hidden;
+    background-color: rgb(156,180,201,0.3);
+    border: none;
+    border-radius: 16%;
+}
+
+.top_right_three_buttons svg path{
+    fill: white;
+}
+
+.menu_options:hover ~ .top_right_three_buttons svg path{
+    fill: black;
+}
+.Tesla_logo_wrapper svg path{
+    fill:white;
+}
+.menu_options:hover ~ .Tesla_logo_wrapper svg path{
+    fill:black;
+}
