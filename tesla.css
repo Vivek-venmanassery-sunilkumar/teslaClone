@@ -13,9 +13,9 @@ body{
 }
 
 .title_bar{
+    display: flex;
     height: 30px;
     width: 100%;
-    position: absolute;
     position:relative;
     top: 0;
     padding-left: 42px;
@@ -26,7 +26,7 @@ body{
     
     width: 150px;
     height: 30px;
-    position:relative;
+    position:absolute;
     overflow: hidden;
 }
 .First_background_modelY{
@@ -35,7 +35,7 @@ body{
     width: 1536px;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -2;
 }
 .Tesla_logo{
     transform: scale(1.2);
@@ -44,6 +44,7 @@ body{
     position: absolute;
     top: 50%;
     left: 10%;
+    z-index: 5;
 }
 .logo_link{
     display: block;
@@ -54,20 +55,28 @@ body{
     left: 0;
 }
 .menu_options{
-    position: absolute;
-    top: 7px;
-    left: 565px;
-    overflow: hidden;
-    height:30px;
+    position: relative;
+    z-index: 4;
+    overflow: visible;
+    margin-left: 35%;
+    height:36px;
+    margin-top: -19px;
+    
 }
 .menu_list_main{
-    margin-top: 2%;
+    margin-top: 16px;
     list-style-type: none;
     display: flex;
     gap: 5px;
     border: none;
     margin-left: -40px;
+    margin-bottom: 5px;
 }
+.menu_list_main:hover button{
+    color: black;
+   
+}
+
 .menu_list_main button{
     font-family:  Arial,sans-serif;
     font-size: 13px;
@@ -78,14 +87,14 @@ body{
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 .menu_list_main button:hover{
     border-radius: 5px;
     background-color: #d0d1d2;
     box-sizing: border-box;
-    color: black;
+   
 }
-
 
 .top_right_three_buttons_list{
     display: flex;
@@ -96,8 +105,9 @@ body{
     
     width: 150px;
     position: absolute;
-    margin-top: -50px;
-    margin-left: 1300px;
+    top: 0;
+    right: 50px;
+    z-index: 5;
 }
 
 .small_button_atag{
@@ -130,3 +140,21 @@ body{
 .menu_options:hover ~ .Tesla_logo_wrapper svg path{
     fill:black;
 }
+.submenu_vehicles{
+    position: absolute;
+    visibility: hidden;
+    background-color: white;
+    margin-top: -42px;
+    margin-left: -573px;
+    height: 0px;
+    width: 1520px;
+    z-index: -5;
+    transition: height 1000ms;
+    overflow: hidden;
+}
+#vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
+    z-index: -1;
+    height: 508px;
+    visibility: visible;
+}
+
