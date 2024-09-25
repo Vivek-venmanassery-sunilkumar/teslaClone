@@ -61,7 +61,6 @@ body{
     margin-left: 35%;
     height:36px;
     margin-top: -19px;
-    
 }
 .menu_list_main{
     margin-top: 16px;
@@ -74,7 +73,7 @@ body{
 }
 .menu_list_main:hover button{
     color: black;
-   
+    transition-delay: 0.2s;
 }
 
 .menu_list_main button{
@@ -93,6 +92,7 @@ body{
     border-radius: 5px;
     background-color: #d0d1d2;
     box-sizing: border-box;
+    transition-delay: 0.2s;
    
 }
 
@@ -128,33 +128,39 @@ body{
 }
 
 .top_right_three_buttons svg path{
+    transition-delay: 0.2s;
     fill: white;
 }
 
 .menu_options:hover ~ .top_right_three_buttons svg path{
+    transition-delay: 0.2s;
     fill: black;
 }
 .Tesla_logo_wrapper svg path{
+    transition-delay: 0.2s;
     fill:white;
 }
 .menu_options:hover ~ .Tesla_logo_wrapper svg path{
+    transition-delay: 0.2s;
     fill:black;
 }
 .submenu_vehicles{
     position: absolute;
-    visibility: hidden;
     background-color: white;
     margin-top: -42px;
     margin-left: -573px;
     height: 0px;
     width: 1520px;
-    z-index: -5;
-    transition: height 1000ms;
-    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: height 0.5s ease-out,opacity 0.5s ease-out;
 }
 #vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
     z-index: -1;
-    height: 508px;
-    visibility: visible;
+    height: 400px;
+    opacity: 1;
+}
+.menu_options:hover~.First_background_modelY .image_modelY{
+    filter: blur(10px);
 }
 
