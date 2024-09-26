@@ -155,17 +155,82 @@ body{
     margin-left: -573px;
     height: 0px;
     width: 1544px;
-    z-index: -1;
+    z-index: -5;
     opacity: 0;
     transition: height 0.5s ease-out,opacity 0.5s ease-out;
 }
 #vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
     z-index: -1;
-    height: 510px;
+    height: 470px;
     border-bottom: double;
     opacity: 1;
 }
 .menu_options:hover~.First_background_modelY .image_modelY{
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
+.submenu_vehicles{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.submenu_vehicles_leftside{
+    flex-grow: 1;
+    height: 340px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.submenu_vehicles_rightside{
+    background-color: red;
+    width: 470px;
+    height: 340px;
+}
+.submenu_vehicles_leftside_options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.submenu_vehicles_leftside .submenu_vehicles_leftside_options .submenu_vehicles_titles h3{
+    margin: 0;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+}
+.Cars{
+    height: 115px;
+    width: 200px;
+    display: block;
+}
+.padding_wrapper{
+    height: 340px;
+    width:150px;
+}
+.padding_wrapper_rightside{
+    height: 340px;
+    width: 50px;
+}
+.submenu_vehicles_titles{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.vehicle_atag_menu{
+    height: 30px;
+}
+.links_inside_submenu_vehicles_leftside_options{
+    height: 25px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.links_inside_submenu_vehicles_leftside_options a{
+    color: #5c5e62;
+}
