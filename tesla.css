@@ -150,20 +150,21 @@ body{
 }
 .submenu_vehicles{
     position: absolute;
+    pointer-events: none;
     background-color: white;
     margin-top: -42px;
     margin-left: -573px;
     height: 0px;
     width: 1544px;
-    z-index: -5;
+    z-index: -10;
     opacity: 0;
     transition: height 0.5s ease-out,opacity 0.5s ease-out;
 }
 #vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
     z-index: -1;
     height: 470px;
-    border-bottom: double;
     opacity: 1;
+    pointer-events: visible;
 }
 .menu_options:hover~.First_background_modelY .image_modelY{
     filter: blur(5px);
@@ -176,6 +177,7 @@ body{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    
 }
 .submenu_vehicles_leftside{
     flex-grow: 1;
@@ -184,9 +186,9 @@ body{
     grid-template-columns: repeat(4,1fr);
 }
 .submenu_vehicles_rightside{
-    background-color: red;
     width: 470px;
     height: 340px;
+    border-left: 2px solid #c7cad0;
 }
 .submenu_vehicles_leftside_options{
     display: flex;
@@ -231,6 +233,32 @@ body{
     justify-content: space-around;
     
 }
-.links_inside_submenu_vehicles_leftside_options a{
+.links_inside_submenu_vehicles_leftside_options a span{
     color: #5c5e62;
+    text-decoration: none;
+    position: relative;
 }
+.links_inside_submenu_vehicles_leftside_options a{
+    text-decoration: none;
+}
+
+.links_inside_submenu_vehicles_leftside_options a span::after{
+    content: '';
+    background-color: #5c5e62;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 0.5px;
+    height: 1px;
+    transform-origin: bottom;
+    transition:box-shadow 0.2s ease;
+}
+
+.links_inside_submenu_vehicles_leftside_options a:hover span::after{
+    background-color: black;
+    box-shadow: 0 0.5px 1px black;   
+}
+
+
