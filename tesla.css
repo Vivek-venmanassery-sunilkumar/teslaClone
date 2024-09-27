@@ -162,7 +162,26 @@ body{
     width: 1544px;
     z-index: -10;
     opacity: 0;
-    transition: height 0.5s ease-out,opacity 0.5s ease-out;
+    transition: height 0.33s ease-out,opacity 0.1s ease-out;
+}
+.submenu_energy{
+    position:absolute;
+    pointer-events: none;
+    background-color: white;
+    margin-top: -42px;
+    margin-left: -650px;
+    height: 0px;
+    width: 1544px;
+    z-index: -10;
+    opacity:0;
+    transition: height 0.33s ease-in-out,opacity 0.1s ease-out;
+}
+
+#energy:hover ~ .submenu_energy,.submenu_energy:hover{
+    z-index: -1;
+    height: 400px;
+    opacity: 1;
+    pointer-events: visible;
 }
 #vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
     z-index: -1;
