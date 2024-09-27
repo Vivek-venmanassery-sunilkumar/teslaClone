@@ -12,7 +12,6 @@ body{
     width: 100%;
 }
 
-
 .title_bar{
     display: flex;
     height: 30px;
@@ -186,8 +185,9 @@ body{
     grid-template-columns: repeat(4,1fr);
 }
 .submenu_vehicles_rightside{
-    width: 470px;
+    width: 420px;
     height: 340px;
+    padding-left: 50px;
     border-left: 2px solid #c7cad0;
 }
 .submenu_vehicles_leftside_options{
@@ -237,6 +237,9 @@ body{
     color: #5c5e62;
     text-decoration: none;
     position: relative;
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: 550;
 }
 .links_inside_submenu_vehicles_leftside_options a{
     text-decoration: none;
@@ -260,5 +263,34 @@ body{
     background-color: black;
     box-shadow: 0 0.5px 1px black;   
 }
-
-
+.submenu_vehicles_rightside ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    list-style-type: none;
+}
+.submenu_vehicles_rightside a{
+    text-decoration: none;
+}
+.submenu_vehicles_rightside ol a span{
+    color: #404143;
+    font-weight: 550;
+    font-size: small;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+.submenu_vehicles_rightside ol a span::after{
+    content: '';
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: bottom;
+    transition: box-shadow 0.2s ease;
+}
+.submenu_vehicles_rightside ol a:hover span::after{
+    height: 2.5px;
+    box-shadow: 0 2px 0.5px rgba(0,0,0,0.7);  
+}
