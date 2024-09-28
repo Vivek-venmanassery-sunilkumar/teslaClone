@@ -164,25 +164,8 @@ body{
     opacity: 0;
     transition: height 0.33s ease-out,opacity 0.1s ease-out;
 }
-.submenu_energy{
-    position:absolute;
-    pointer-events: none;
-    background-color: white;
-    margin-top: -42px;
-    margin-left: -650px;
-    height: 0px;
-    width: 1544px;
-    z-index: -10;
-    opacity:0;
-    transition: height 0.33s ease-in-out,opacity 0.1s ease-out;
-}
 
-#energy:hover ~ .submenu_energy,.submenu_energy:hover{
-    z-index: -1;
-    height: 400px;
-    opacity: 1;
-    pointer-events: visible;
-}
+
 #vehicles:hover + .submenu_vehicles,.submenu_vehicles:hover{
     z-index: -1;
     height: 470px;
@@ -238,6 +221,7 @@ body{
     height: 340px;
     width: 50px;
 }
+
 .submenu_vehicles_titles{
     width: 100%;
     flex-grow: 1;
@@ -337,4 +321,64 @@ body{
     width: 1536px;
     height: 900px;
     margin-top: -100px;
+}
+
+.submenu_energy{
+    position:absolute;
+    pointer-events: none;
+    background-color: white;
+    margin-top: -42px;
+    margin-left: -650px;
+    height: 0px;
+    width: 1544px;
+    z-index: -10;
+    opacity:0;
+    display:flex;
+    flex-direction: row;
+    padding-top: 50px;
+    align-items: center;
+    transition: height 0.33s ease-in-out,opacity 0.1s ease-out;
+}
+#energy:hover + .submenu_energy,.submenu_energy:hover{
+    z-index: -1;
+    height: 400px;
+    opacity: 1;
+    pointer-events: visible;
+}
+.submenu_energy_rightside{
+    width: 428px;
+    height: 270px;
+    padding-left: 50px;
+    border-left: 2px solid #c7cad0;
+}
+
+.padding_wrapper_energy{
+    width: 150px;
+    height: 270px;
+}
+.padding_wrapper_energy_rightside{
+    width: 50px;
+}
+.submenu_energy_leftside{
+    flex-grow: 1;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.energy_panels{
+    height: 115px;
+    width:200px;
+}
+.submenu_energy_titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.links_inside_submenu_energy_leftside_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:25px;
+    width: 100px;
 }
